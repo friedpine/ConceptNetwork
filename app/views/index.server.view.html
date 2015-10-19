@@ -1,0 +1,10 @@
+{% extends 'layout.server.view.html' %}
+
+{% block content %}
+<section class="app-container ng-scope ng-fadeInLeft2">
+	<aside data-ng-include="'modules/core/views/sidebar.client.view.html'" ng-if="authentication.user._id" data-ng-class="app.theme.sidebar" class="ng-scope bg-inverse"></aside>
+	<section class="ng-scope">
+		<div data-ui-view autoscroll="false" class="app ng-scope ng-fadeInLeft2"></div>
+	</section>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+<section data-ng-controller="InfrasController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Infras</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="infra in infras" data-ng-href="#!/infras/{{infra._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="infra.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="infra.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="infra.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!infras.$resolved || infras.length">
+    	No Infras yet, why don't you <a href="/#!/infras/create">create one</a>?
+    </div>
+</section>

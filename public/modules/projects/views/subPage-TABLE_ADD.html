@@ -1,0 +1,29 @@
+<h2>Add Samples</h2>
+<div data-ng-init="data_init(page.tdata)">
+<hot-table
+    settings="{colHeaders: colHeaders, contextMenu: ['row_above', 'row_below', 'remove_row'], afterChange: afterChange }"
+    rowHeaders="false"
+    datarows="tabledata"
+    height="200"
+    width="1400"
+    id="ADT">
+    <hot-column data="name"             title="'name'" width="150"></hot-column>
+    <hot-column data="species"             title="'species'" width="150"></hot-column>
+    <hot-column data="sampleSource"             title="'sampleSource'" width="150"></hot-column>
+    <hot-column data="tags" title="'tags'" width="150" ></hot-column>
+</hot-table>
+<a class="btn btn-sm btn-success" data-ng-click="push2array('samples');" role="button">Submit</a>
+
+<h2>Sample List</h2>
+<hot-table
+    settings="{colHeaders: colHeaders, contextMenu: ['row_above', 'row_below', 'remove_row'], afterChange: afterChange }"
+    rowHeaders="false"
+    datarows="listdatas"
+    height="400"
+    width="1400"
+    id="ADT2">
+    <hot-column data="name"             title="'name'" width="150"></hot-column>
+    <hot-column data="species"             title="'species'" width="150"></hot-column>
+    <hot-column data="sampleSource"             title="'sampleSource'" width="150"></hot-column>
+    <hot-column data="tags" title="'tags'" width="150" ></hot-column>
+</hot-table>

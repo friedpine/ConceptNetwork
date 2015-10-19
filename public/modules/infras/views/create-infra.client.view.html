@@ -1,0 +1,27 @@
+<section data-ng-controller="InfrasController">
+    <div class="page-header">
+        <h1>New Infra</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <div class="controls">
+                        <label class="control-label" for="content">Config_Type</label>
+                        <input name="scopeman" type="text" data-ng-model="config_type" id="config_type" class="form-control" placeholder="Who Invente This Scope?" required>
+                        <label class="control-label" for="content">Config_Title</label>
+                        <input name="subject" type="text" data-ng-model="config_title" id="config_title" class="form-control" placeholder="What is the thing?">
+                        <label class="control-label" for="content">Detailed</label>
+                        <textarea name="detailed" data-ng-model="detailed" id="detailed" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+                <div data-ng-show="error" class="text-danger">
+                    <strong data-ng-bind="error"></strong>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>

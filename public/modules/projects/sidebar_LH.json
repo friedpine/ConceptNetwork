@@ -1,0 +1,88 @@
+[
+  {
+    "text": "Informations",
+    "type": "heading",
+    "translate": "sidebar.heading.HEADER"
+  },
+  {
+    "text": "Summary",
+    "sref": "app.dashboard",
+    "icon": "icon-bar-graph",
+    "translate": "sidebar.nav.DASHBOARD",
+    "alert": {"text":"3", "class": "label-info"}
+  },
+  {
+    "text": "Progress",
+    "sref": "#",
+    "icon": "icon-box",
+    "subnav": [
+      {"text": "Buttons",       "sref": "app.buttons", "translate": "sidebar.nav.component.BUTTON" },
+      {"text": "Notifications", "sref": "app.notifications", "translate": "sidebar.nav.component.NOTIFICATION" },
+      {"text": "Bootsrap UI",   "sref": "app.bootstrapui", "translate": "sidebar.nav.component.BOOTSTRAPUI", "alert": {"text":"7", "class":"label-primary"} },
+      {
+        "type": "separator"
+      },
+      {"text": "Panels",        "sref": "app.panels", "translate": "sidebar.nav.component.PANEL" },
+      {"text": "Portlets",      "sref": "app.portlets", "translate": "sidebar.nav.component.PORTLET" },
+    ],
+    "translate": "sidebar.nav.component.COMPONENTS"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "text": "Samples",
+    "sref": "#",
+    "icon": "icon-book",
+    "subnav": [
+      {"text": "Inputs",   "sref": "app.form-inputs", "translate": "sidebar.nav.form.INPUT" },
+      {"text": "Validation", "sref": "app.form-validation", "translate": "sidebar.nav.form.VALIDATION" },
+      {"text": "Wizard",     "sref": "app.form-wizard", "translate": "sidebar.nav.form.WIZARD" }
+    ],
+    "translate": "sidebar.nav.form.FORM"
+  },
+  {
+    "text": "Process",
+    "sref": "#",
+    "icon": "icon-grid",
+    "subnav": [
+      { "text": "Responsive",   "sref": "app.table-responsive", "translate": "sidebar.nav.table.RESPONSIVE" },
+      { "text": "ngTables", "sref": "app.table-ngtable" }
+    ],
+    "translate": "sidebar.nav.table.TABLE"
+  },
+  {
+    "text": "CNVs",
+    "sref": "app.charts",
+    "icon": "icon-pie-graph",
+    "translate": "sidebar.nav.CHART",
+    "alert": {"text":"12", "class": "label-success"}
+  },
+  {
+    "text": "SNVs",
+    "sref": "#",
+    "icon": "icon-map",
+    "subnav": [
+      {"text": "Google Maps",   "sref": "app.maps-google", "translate": "sidebar.nav.map.GOOGLE" },
+      {"text": "Vector Maps",   "sref": "app.maps-vector", "translate": "sidebar.nav.map.VECTOR" }
+    ],
+    "translate": "sidebar.nav.map.MAP"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "text": "Extras",
+    "type": "heading"
+  },
+  {
+    "text": "Pages",
+    "sref": "#",
+    "icon": "icon-stack",
+    "subnav": [
+      { "text": "Login",            "sref": "page.login", "translate": "sidebar.nav.pages.LOGIN" },
+      { "text": "Sign up",          "sref": "page.register", "translate": "sidebar.nav.pages.REGISTER" },
+    ],
+    "translate": "sidebar.nav.pages.PAGES"
+  }
+]

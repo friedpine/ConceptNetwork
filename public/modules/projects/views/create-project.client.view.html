@@ -1,0 +1,27 @@
+<section data-ng-controller="ProjectsController" data-ng-init="get_init_json()">
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label">Project_name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="frames.name" required class="page-header">
+                    </div>
+                </div>
+                <div class="form-group" ng-repeat="unit in frames.frames_order.unit">
+                    <label class="control-label">{{unit}}</label>
+                    <button type="button" class="btn-sm btn-default" data-ng-click='add_pages(unit)' >ADD PAGES</button>
+                    <div class="controls" ng-repeat="page in frames.frames | filter:{unitname: unit}">
+                        <input type="text" data-ng-model="page.pagename" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

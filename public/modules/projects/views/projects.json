@@ -1,0 +1,53 @@
+{
+     "name" : "PROJECT NAMES",
+
+     "frames" : [
+          {"unitname" : "samples",
+            "pagename": "Mel",
+            "page" : [{"name":"samples_infos","ttype":"Samples_ADD","tdata": "samples"},
+                      {"name":"files_infos","ttype":"Files_ADD","tdata": "files"}]},
+          
+          {"unitname" : "process",
+           "pagename" : "TOPHAT",
+           "page" : [{"name" : "TOPHAT","ttype" : "TOPHAT","tdata" : "files"}]},
+
+          {"unitname" : "Results", 
+           "pagename" : "CNVs",
+            "page" : [{"name" : "ADD_Samples","ttype" : "TABLE_ADD","tdata" : "process"},
+                      {"name" : "Samples_LISTS","ttype" : "TABLE_LIST","tdata" : "process"}]}
+          ],
+
+     "frames_order" : {"unit" : ["samples", "process", "Results"]},
+
+     "page_templates" : {
+          "samples" : 
+            {"unitname" : "samples", "pagename": "New", 
+             "page" : [{"name":"samples_infos","ttype":"Samples_ADD","tdata": "samples"},
+                      {"name":"files_infos","ttype":"Files_ADD","tdata": "files"}]},
+
+          "process" : 
+            {"unitname" : "process", "pagename" : "New",
+            "page" : [{"name" : "TOPHAT","ttype" : "TOPHAT","tdata" : "files"}]},
+
+          "Results" : 
+            {"unitname" : "Results", "pagename" : "New",
+             "page" : [{"name" : "ADD_Samples","ttype" : "TABLE_ADD","tdata" : "process"},
+                      {"name" : "Samples_LISTS","ttype" : "TABLE_LIST","tdata" : "process"}]}
+      },
+     
+     "samples" : [{"name":"", "species":"", "sampleSource":"", "tags":""}],
+     
+     "files" : [{"sample": "", "filetag": "", "path": "", "method": ""}]
+}
+
+
+
+var x=1,y=z=0;
+function add(n){
+  return n=n+1;
+}
+y=add(x);
+function add(n){
+return n=n+3;
+}
+z=add(x);

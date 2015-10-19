@@ -1,0 +1,5 @@
+<section data-ng-controller="PagesController" data-ng-init="get_pageInfo()">
+	<div data-ng-repeat= "page in pageinfos.frames[0].page">
+		<ng-include src="templateUrl(page.ttype)"></ng-include>
+	</div>
+</section>
